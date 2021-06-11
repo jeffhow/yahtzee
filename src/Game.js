@@ -158,9 +158,15 @@ class Game extends Component {
                 disabled={this.state.rollsLeft===0}
                 rolling={this.state.rolling}
                 />
-              <Realistic yahtzee={
-                this.state.dice.every(d=>d===this.state.dice[0] && d > 0) && !this.state.rolling
-              }/>
+              <Realistic 
+                yahtzee={
+                  this.state.dice.every(d=>d===this.state.dice[0] && d > 0) && !this.state.rolling
+                }
+                score={
+                  Object.values(this.state.scores).reduce((a,c) => {
+                  return c ? a+c : a;
+                }, 0)
+                }/>
               <div className='Game-button-wrapper'>
                 <button
                   className='Game-reroll'
