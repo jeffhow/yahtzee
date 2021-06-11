@@ -1,0 +1,78 @@
+.RuleRow {
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 10px;      
+  border-radius:0;
+}
+.RuleRow:first-child{
+  border-top: 1px solid #333;
+}
+.RuleRow-active:hover {
+  cursor: pointer;
+  background: rgba(227, 242, 253, 0.5);
+}
+
+.RuleRow-disabled {
+  background: linear-gradient(
+    to right,
+    rgb(233, 232, 196) 0%,
+    rgb(233, 232, 196) 0%,
+    rgb(233, 232, 196) 30%,
+    rgb(233, 253, 227) 40%
+  );
+  background-size: 300% 300%;
+  animation: Slide 1s ease 1;
+}
+
+@keyframes Slide {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+.RuleRow-name {
+  display: inline-block;
+  position: relative;
+  /* text-decoration: line-through; */
+}
+.RuleRow-name::before {
+  transition: transform 0.5s ease;
+  content:'';
+  position: absolute;
+  height:100%;
+  width: calc(100% + 10px);
+  border-top: 1px solid black;
+  top:50%;
+  left:-5px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.RuleRow-disabled .RuleRow-name::before {
+  transform: scaleX(100%);
+  /* background-color: green; */
+}
+
+.RuleRow-disabled:hover {
+  cursor: not-allowed;
+}
+
+/* .RuleRow span {
+  padding: 0.3em;
+  border-bottom: solid 1px black;
+} */
+
+.RuleRow-name {
+  /* width: 50%; */
+  text-align: left;
+}
+
+.RuleRow-score {
+  /* width: 50%; */
+  text-align: right;
+}

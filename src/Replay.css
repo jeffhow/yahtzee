@@ -1,0 +1,45 @@
+.Replay{
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    max-width: 500px;
+    min-height: 400px;
+    z-index:5;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5), 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.Replay-header{
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: #aa2929;
+}
+
+.Replay-button:hover{
+    /* background-image: linear-gradient(rgba(87, 8, 8, 0.5), rgba(156, 58, 58, 0.5)); */
+    background-position: right center;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.7);
+}
+.Replay-button{
+    background-image: linear-gradient(to right, rgba(199, 44, 44, 0), rgba(94, 11, 11, 0.9));
+    font-size: 2em;
+    background-color: #aa2929;
+    font-weight: 100;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 15px   30px;
+    margin-bottom: 2rem;
+    transition: 0.3s all ease;
+}
